@@ -1,0 +1,23 @@
+// BASE styles
+
+* {
+  font-family: $sec-font;
+  // color: white;
+}
+
+body {
+  font-size: $base-font-size;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  // overflow: hidden;
+}
+
+p {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: $sm-title-text-size;
+}

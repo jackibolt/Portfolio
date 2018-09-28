@@ -1,0 +1,22 @@
+// Nav styles
+
+nav {
+  background: black;
+  color: $font-teal;
+  padding: 0;
+}
+
+a {
+  color: $font-teal;
+  font-size: 1.25rem;
+  @include mediaQ (large) {
+  font-size: 1.75rem;
+  }
+  &:hover {
+    color: inherit;
+    font-size: 1.25rem;
+    @include mediaQ (large) {
+      font-size: 1.75rem;
+    }
+  }
+}

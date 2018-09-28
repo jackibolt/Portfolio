@@ -1,0 +1,117 @@
+* {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+
+p {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.full-container {
+  padding: 0;
+}
+
+.full-wrapper {
+  max-width: 1400px;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  background: black;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #f97985;
+}
+header p {
+  color: #fff;
+}
+
+img {
+  padding: 0;
+  border: grey 3px solid;
+  border-radius: 3px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  img {
+    width: 65%;
+  }
+}
+@media (min-width: 992px) {
+  img {
+    width: 73%;
+  }
+}
+
+nav {
+  background: black;
+  color: #67d9e8;
+  padding: 0;
+}
+
+a {
+  color: #67d9e8;
+  font-size: 1.25rem;
+}
+@media (min-width: 992px) {
+  a {
+    font-size: 1.75rem;
+  }
+}
+a:hover {
+  color: inherit;
+  font-size: 1.25rem;
+}
+@media (min-width: 992px) {
+  a:hover {
+    font-size: 1.75rem;
+  }
+}
+
+.title {
+  padding-left: 10%;
+  color: #d19966;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-text {
+  padding-left: 10%;
+  width: 80%;
+  color: #66b8ff;
+}
+.contact-text a {
+  color: #66b8ff;
+}
+
+@media (min-width: 992px) {
+  .projects .a {
+    text-align: right;
+  }
+  .projects .b {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */

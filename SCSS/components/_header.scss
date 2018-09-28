@@ -1,0 +1,17 @@
+// HEADER styles
+
+header {
+  position: fixed;
+  background: black;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: $font-coral;
+  p {
+    color: $white;
+  }
+}

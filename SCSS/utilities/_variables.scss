@@ -1,0 +1,34 @@
+// FONT
+$main-font: 'Covered By Your Grace', cursive;
+$sec-font: 'Gloria Hallelujah', cursive;
+
+$base-font-size: 16px;
+$sm-title-text-size: 1.25rem;
+$title-text-size: 1.5rem;
+
+
+
+// COLORS
+$black: black;
+$grey: #b3b3b3;
+$light-grey: lighten($grey, 40%);
+$background: #f2f2f2;
+$white: #fff;
+
+$font-coral: #f97985;
+$font-teal: #67d9e8;
+$font-green: #8bf2af;
+$font-orange: #d19966;
+$font-blue: #66b8ff;
+
+$box-outline: #00af00;
+
+// BREAKPOINTS
+$brk-small: 576px;
+$brk-medium: 768px;
+$brk-large: 992px;
+$brk-xl: 1200px;
+
+
+// SPACING
+$grid-gap: 20px;
