@@ -1,10 +1,16 @@
 // FONT
-$main-font: 'Covered By Your Grace', cursive;
+$prim-font: 'Kodchasan', sans-serif;
 $sec-font: 'Gloria Hallelujah', cursive;
+$tir-font: 'Nunito Sans', sans-serif;
 
+
+$tiny-overlay: .7rem;
+$small-overlay: .85rem;
 $base-font-size: 16px;
 $sm-title-text-size: 1.25rem;
-$title-text-size: 1.5rem;
+$title-text-size: 1.75rem;
+$sm-nav-font-size: 1.25rem;
+$main-nav-font-size: 1.75rem;
 
 
 
@@ -12,7 +18,7 @@ $title-text-size: 1.5rem;
 $black: black;
 $grey: #b3b3b3;
 $light-grey: lighten($grey, 40%);
-$background: #f2f2f2;
+$background: #292d34;
 $white: #fff;
 
 $font-coral: #f97985;
@@ -20,6 +26,7 @@ $font-teal: #67d9e8;
 $font-green: #8bf2af;
 $font-orange: #d19966;
 $font-blue: #66b8ff;
+$font-yellow: #feff49;
 
 $box-outline: #00af00;
 
@@ -31,4 +38,6 @@ $brk-xl: 1200px;
 
 
 // SPACING
-$grid-gap: 20px;
+$sm-content-width: 95%;
+$main-content-width: 80%;
+$left-padding: 10%;

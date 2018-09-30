@@ -1,29 +1,155 @@
 
+// General styles
+
 .title {
-  padding-left: 10%;
   color: $font-orange;
+  font-weight: bold;
   font-size: $sm-title-text-size;
   @include mediaQ (med) {
     font-size: $title-text-size;
   }
 }
 
-.contact-text {
-  padding-left: 10%;
-  width: 80%;
-  color: $font-blue;
-  a {
-    color: $font-blue;
+p {
+  font-size: $base-font-size;
+  @include mediaQ (med) {
+    font-size: $sm-title-text-size;
   }
 }
 
+.about,
+.contact {
+  width: $sm-content-width;
+  @include mediaQ (large) {
+      width: $main-content-width;
+  }
+}
+
+// About section
+
+.about {
+  color: $font-blue;
+  h4 {
+    line-height: 2rem;
+  }
+}
+
+.humans {
+  color: $font-green;
+}
+
+#bright {
+  color: $font-yellow;
+  cursor: pointer;
+}
+
+
+// Projects section
+
 .projects {
+  .title {
+    padding-left: $left-padding;
+  }
   @include mediaQ (large) {
     .a {
       text-align: right;
     }
     .b {
       text-align: left;
+    }
+  }
+}
+
+.a1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.b1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.project-overlay {
+  border: grey 3px solid;
+  border-radius: 3px;
+  color: $font-blue;
+  line-height: normal;
+  h5 {
+    border-bottom: #cccccc .5px solid;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: $tiny-overlay;
+    @include mediaQ (med) {
+      font-size: $small-overlay;
+    }
+    @include mediaQ (large) {
+      font-size: $base-font-size
+    }
+  }
+  p {
+    font-size: $tiny-overlay;
+    @include mediaQ (med) {
+      margin-top: 10px;
+      font-size: $small-overlay;
+    }
+    @include mediaQ (large) {
+      font-size: $base-font-size
+    }
+  }
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgba(0,0,0, .9);
+  width: 100%;
+  @include mediaQ (med) {
+    width: 65%;
+  }
+  @include mediaQ (large) {
+    width: 73%;
+  }
+}
+
+.skill {
+  margin-left: 4px;
+  margin-right: 4px;
+  &:hover {
+    font-weight: 900;
+    color: $font-teal;
+  }
+}
+
+.desc {
+  display: none;
+  @include mediaQ(med) {
+    display: block;
+  }
+}
+
+// Contact section
+
+.contact-text {
+  color: $font-blue;
+}
+
+.contact {
+  p {
+    color: $font-teal;
+  }
+  a {
+    color: $font-blue;
+    font-size: $sm-title-text-size;
+    text-decoration: none;
+    &:hover {
+      color: $font-green;
     }
   }
 }

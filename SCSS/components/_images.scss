@@ -1,14 +1,32 @@
 // IMAGES styles
 
-img {
-  padding: 0;
-  border: grey 3px solid;
-  border-radius: 3px;
-  width: 100%;
+.projects {
+  img {
+    padding: 0;
+    border: grey 3px solid;
+    border-radius: 3px;
+    width: 100%;
+    @include mediaQ (med) {
+      width: 65%;
+    }
+    @include mediaQ (large) {
+      width: 73%;
+    }
+  }
+}
+
+#biplane {
+  width: 45px;
   @include mediaQ (med) {
-    width: 65%;
+    width: 70px;
   }
-  @include mediaQ (large) {
-    width: 73%;
+  margin-left: 50px;
+}
+
+#lightbulb {
+  width: 60px;
+  @include mediaQ (med) {
+    width: 100px;
   }
+  display: none;
 }

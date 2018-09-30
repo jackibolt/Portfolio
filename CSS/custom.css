@@ -1,12 +1,13 @@
 * {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Kodchasan", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   font-size: 16px;
   width: 100%;
   margin: auto;
-  background-color: black;
+  background-color: #292d34;
   color: white;
 }
 
@@ -16,6 +17,16 @@ p {
 
 h2 {
   font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 .full-container {
@@ -28,8 +39,9 @@ h2 {
 }
 
 header {
+  font-family: "Gloria Hallelujah", cursive;
   position: fixed;
-  background: black;
+  background: #292d34;
   left: 0;
   right: 0;
   margin: auto;
@@ -39,72 +51,130 @@ header {
   padding-right: 15px;
   color: #f97985;
 }
-header p {
+header h6 {
   color: #fff;
+  font-family: "Kodchasan", sans-serif;
 }
 
-img {
+.projects img {
   padding: 0;
   border: grey 3px solid;
   border-radius: 3px;
   width: 100%;
 }
 @media (min-width: 768px) {
-  img {
+  .projects img {
     width: 65%;
   }
 }
 @media (min-width: 992px) {
-  img {
+  .projects img {
     width: 73%;
   }
 }
 
+#biplane {
+  width: 45px;
+  margin-left: 50px;
+}
+@media (min-width: 768px) {
+  #biplane {
+    width: 70px;
+  }
+}
+
+#lightbulb {
+  width: 60px;
+  display: none;
+}
+@media (min-width: 768px) {
+  #lightbulb {
+    width: 100px;
+  }
+}
+
 nav {
-  background: black;
+  background: #292d34;
   color: #67d9e8;
   padding: 0;
 }
-
-a {
+nav h2 {
+  font-size: 1.25rem;
+}
+@media (min-width: 992px) {
+  nav h2 {
+    font-size: 1.75rem;
+  }
+}
+nav a {
   color: #67d9e8;
   font-size: 1.25rem;
 }
 @media (min-width: 992px) {
-  a {
+  nav a {
     font-size: 1.75rem;
   }
 }
-a:hover {
+nav a:hover {
   color: inherit;
   font-size: 1.25rem;
 }
 @media (min-width: 992px) {
-  a:hover {
+  nav a:hover {
     font-size: 1.75rem;
   }
 }
 
 .title {
-  padding-left: 10%;
   color: #d19966;
+  font-weight: bold;
   font-size: 1.25rem;
 }
 @media (min-width: 768px) {
   .title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
-.contact-text {
-  padding-left: 10%;
-  width: 80%;
-  color: #66b8ff;
+p {
+  font-size: 16px;
 }
-.contact-text a {
-  color: #66b8ff;
+@media (min-width: 768px) {
+  p {
+    font-size: 1.25rem;
+  }
 }
 
+.about,
+.contact {
+  width: 95%;
+}
+@media (min-width: 992px) {
+  .about,
+.contact {
+    width: 80%;
+  }
+}
+
+.about {
+  color: #66b8ff;
+}
+.about h4 {
+  line-height: 2rem;
+}
+
+.humans {
+  color: #8bf2af;
+}
+
+#bright {
+  color: #feff49;
+  cursor: pointer;
+}
+
+.projects .title {
+  padding-left: 10%;
+}
 @media (min-width: 992px) {
   .projects .a {
     text-align: right;
@@ -112,6 +182,110 @@ a:hover {
   .projects .b {
     text-align: left;
   }
+}
+
+.a1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.b1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.project-overlay {
+  border: grey 3px solid;
+  border-radius: 3px;
+  color: #66b8ff;
+  line-height: normal;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+}
+.project-overlay h5 {
+  border-bottom: #cccccc 0.5px solid;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .project-overlay h5 {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 992px) {
+  .project-overlay h5 {
+    font-size: 16px;
+  }
+}
+.project-overlay p {
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .project-overlay p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 992px) {
+  .project-overlay p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .project-overlay {
+    width: 65%;
+  }
+}
+@media (min-width: 992px) {
+  .project-overlay {
+    width: 73%;
+  }
+}
+
+.skill {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.skill:hover {
+  font-weight: 900;
+  color: #67d9e8;
+}
+
+.desc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desc {
+    display: block;
+  }
+}
+
+.contact-text {
+  color: #66b8ff;
+}
+
+.contact p {
+  color: #67d9e8;
+}
+.contact a {
+  color: #66b8ff;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.contact a:hover {
+  color: #8bf2af;
 }
 
 /*# sourceMappingURL=custom.css.map */

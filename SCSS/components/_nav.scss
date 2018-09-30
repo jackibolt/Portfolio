@@ -1,22 +1,27 @@
 // Nav styles
 
 nav {
-  background: black;
+  background: $background;
   color: $font-teal;
   padding: 0;
-}
-
-a {
-  color: $font-teal;
-  font-size: 1.25rem;
-  @include mediaQ (large) {
-  font-size: 1.75rem;
-  }
-  &:hover {
-    color: inherit;
-    font-size: 1.25rem;
+  h2{
+    font-size: $sm-nav-font-size;
     @include mediaQ (large) {
-      font-size: 1.75rem;
+      font-size: $main-nav-font-size;
+    }
+  }
+  a {
+    color: $font-teal;
+    font-size: $sm-nav-font-size;
+    @include mediaQ (large) {
+    font-size: $main-nav-font-size;
+    }
+    &:hover {
+      color: inherit;
+      font-size: $sm-nav-font-size;
+      @include mediaQ (large) {
+      font-size: $main-nav-font-size;
+      }
     }
   }
 }

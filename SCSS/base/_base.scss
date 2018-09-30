@@ -1,17 +1,16 @@
 // BASE styles
 
 * {
-  font-family: $sec-font;
-  // color: white;
+  font-family: $prim-font;
+  box-sizing: border-box;
 }
 
 body {
   font-size: $base-font-size;
   width: 100%;
   margin: auto;
-  background-color: black;
+  background-color: $background;
   color: white;
-  // overflow: hidden;
 }
 
 p {
@@ -20,4 +19,12 @@ p {
 
 h2 {
   font-size: $sm-title-text-size;
+}
+
+h4 {
+  font-size: $base-font-size;
+  line-height: 1.4;
+  @include mediaQ (med) {
+    font-size: 1.5rem;
+  }
 }
