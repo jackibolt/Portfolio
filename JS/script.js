@@ -5,9 +5,6 @@ const nav = document.querySelector('nav');
 const bigContainer = document.getElementById('big-container');
 const footer = document.querySelector('#github-icon');
 
-console.log(footer);
-
-
 if (screen.width < 768) {
 
 }
@@ -22,25 +19,25 @@ nav.addEventListener('mouseover', (e) => {
       e.target.textContent = 'Home';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '1';
-      })
+      });
     }
     else if (e.target.textContent === '2') {
       e.target.textContent = 'About';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '2';
-      })
+      });
     }
     else if (e.target.textContent === '3') {
       e.target.textContent = 'Projects';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '3';
-      })
+      });
     }
     else if (e.target.textContent === '4') {
       e.target.textContent = 'Contact';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '4';
-      })
+      });
     }
   }
 });
@@ -172,5 +169,4 @@ nav.addEventListener('click', (e) => {
     bigContainer.innerHTML = contactHTML;
     footer.style.display = 'block';
   }
-
-})
+});
