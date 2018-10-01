@@ -17,13 +17,22 @@ p {
   }
 }
 
+.home,
 .about,
 .contact {
   width: $sm-content-width;
   @include mediaQ (large) {
-      width: $main-content-width;
+    width: $main-content-width;
   }
 }
+
+// Home section
+
+.home {
+  padding-right: 0px;
+  text-align: center;
+}
+
 
 // About section
 
@@ -75,6 +84,7 @@ p {
 }
 
 .project-overlay {
+  opacity: 0;
   border: grey 3px solid;
   border-radius: 3px;
   color: $font-blue;
@@ -84,18 +94,21 @@ p {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: $tiny-overlay;
+    h5,
+    p {
+      font-size: $tiny-overlay;
+      margin-top: 10px;
+    }
     @include mediaQ (med) {
       font-size: $small-overlay;
     }
     @include mediaQ (large) {
-      font-size: $base-font-size
+      font-size: $sm-title-text-size;
     }
   }
   p {
-    font-size: $tiny-overlay;
+    // margin-top: 10px;
     @include mediaQ (med) {
-      margin-top: 10px;
       font-size: $small-overlay;
     }
     @include mediaQ (large) {
@@ -108,7 +121,7 @@ p {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background: rgba(0,0,0, .9);
+  background: rgba(41, 45, 52, .9);
   width: 100%;
   @include mediaQ (med) {
     width: 65%;
@@ -116,15 +129,20 @@ p {
   @include mediaQ (large) {
     width: 73%;
   }
+  &:hover {
+    opacity: 1;
+    transition: .5s;
+  }
 }
+
 
 .skill {
   margin-left: 4px;
   margin-right: 4px;
-  &:hover {
-    font-weight: 900;
-    color: $font-teal;
-  }
+  // &:hover {
+  //   font-weight: 900;
+  //   color: $font-teal;
+  // }
 }
 
 .desc {
@@ -136,17 +154,16 @@ p {
 
 // Contact section
 
-.contact-text {
-  color: $font-blue;
-}
-
 .contact {
   p {
     color: $font-teal;
   }
   a {
     color: $font-blue;
-    font-size: $sm-title-text-size;
+    font-size: $small-overlay;
+    @include mediaQ (med){
+      font-size: $sm-title-text-size;
+    }
     text-decoration: none;
     &:hover {
       color: $font-green;

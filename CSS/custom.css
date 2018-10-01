@@ -9,6 +9,7 @@ body {
   margin: auto;
   background-color: #292d34;
   color: white;
+  min-height: 100vh;
 }
 
 p {
@@ -31,11 +32,17 @@ h4 {
 
 .full-container {
   padding: 0;
+  flex: 1;
 }
 
 .full-wrapper {
+  min-height: 100vh;
   max-width: 1400px;
   text-align: center;
+}
+
+.big-container {
+  min-height: calc(100vh - 220px);
 }
 
 header {
@@ -56,6 +63,75 @@ header h6 {
   font-family: "Kodchasan", sans-serif;
 }
 
+#meeting {
+  display: none;
+}
+@media (min-width: 768px) {
+  #meeting {
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: 0px;
+    left: 80px;
+  }
+}
+@media (min-width: 992px) {
+  #meeting {
+    position: absolute;
+    width: 350px;
+    top: 0px;
+    left: 100px;
+  }
+}
+
+#connect {
+  display: none;
+}
+@media (min-width: 768px) {
+  #connect {
+    display: block;
+    margin-top: 130px;
+  }
+}
+@media (min-width: 992px) {
+  #connect {
+    display: block;
+    margin-top: 0px;
+  }
+}
+
+#connect-stack {
+  margin-top: 40px;
+  margin-left: 30px;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  #connect-stack {
+    display: none;
+  }
+}
+
+#world {
+  margin-top: -20px;
+  width: 220px;
+}
+@media (min-width: 768px) {
+  #world {
+    width: 450px;
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+  }
+}
+@media (min-width: 992px) {
+  #world {
+    width: 600px;
+    position: absolute;
+    bottom: -60px;
+    right: 50px;
+  }
+}
+
 .projects img {
   padding: 0;
   border: grey 3px solid;
@@ -64,12 +140,12 @@ header h6 {
 }
 @media (min-width: 768px) {
   .projects img {
-    width: 65%;
+    width: 63%;
   }
 }
 @media (min-width: 992px) {
   .projects img {
-    width: 73%;
+    width: 70%;
   }
 }
 
@@ -84,12 +160,20 @@ header h6 {
 }
 
 #lightbulb {
-  width: 60px;
+  width: 100px;
+  position: absolute;
+  bottom: -15px;
+  left: 425px;
   display: none;
 }
+
+#github-icon {
+  display: none;
+  width: 120px;
+}
 @media (min-width: 768px) {
-  #lightbulb {
-    width: 100px;
+  #github-icon {
+    width: 150px;
   }
 }
 
@@ -145,15 +229,22 @@ p {
   }
 }
 
+.home,
 .about,
 .contact {
   width: 95%;
 }
 @media (min-width: 992px) {
-  .about,
+  .home,
+.about,
 .contact {
     width: 80%;
   }
+}
+
+.home {
+  padding-right: 0px;
+  text-align: center;
 }
 
 .about {
@@ -199,6 +290,7 @@ p {
 }
 
 .project-overlay {
+  opacity: 0;
   border: grey 3px solid;
   border-radius: 3px;
   color: #66b8ff;
@@ -209,7 +301,7 @@ p {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(41, 45, 52, 0.9);
   width: 100%;
 }
 .project-overlay h5 {
@@ -217,7 +309,11 @@ p {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.project-overlay h5 h5,
+.project-overlay h5 p {
   font-size: 0.7rem;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .project-overlay h5 {
@@ -226,15 +322,11 @@ p {
 }
 @media (min-width: 992px) {
   .project-overlay h5 {
-    font-size: 16px;
+    font-size: 1.25rem;
   }
-}
-.project-overlay p {
-  font-size: 0.7rem;
 }
 @media (min-width: 768px) {
   .project-overlay p {
-    margin-top: 10px;
     font-size: 0.85rem;
   }
 }
@@ -253,14 +345,14 @@ p {
     width: 73%;
   }
 }
+.project-overlay:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
 
 .skill {
   margin-left: 4px;
   margin-right: 4px;
-}
-.skill:hover {
-  font-weight: 900;
-  color: #67d9e8;
 }
 
 .desc {
@@ -272,17 +364,18 @@ p {
   }
 }
 
-.contact-text {
-  color: #66b8ff;
-}
-
 .contact p {
   color: #67d9e8;
 }
 .contact a {
   color: #66b8ff;
-  font-size: 1.25rem;
+  font-size: 0.85rem;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .contact a {
+    font-size: 1.25rem;
+  }
 }
 .contact a:hover {
   color: #8bf2af;

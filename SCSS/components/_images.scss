@@ -1,5 +1,60 @@
 // IMAGES styles
 
+#meeting {
+  display: none;
+  @include mediaQ (med) {
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: 0px;
+    left: 80px;
+  }
+  @include mediaQ (large) {
+    position: absolute;
+    width: 350px;
+    top: 0px;
+    left: 100px;
+  }
+}
+
+#connect {
+  display: none;
+  @include mediaQ (med) {
+    display: block;
+    margin-top: 130px;
+  }
+  @include mediaQ (large) {
+    display: block;
+    margin-top: 0px;
+  }
+}
+
+#connect-stack {
+  margin-top: 40px;
+  margin-left: 30px;
+  height: 200px;
+  @include mediaQ (med) {
+    display: none;
+  }
+}
+
+#world {
+  margin-top: -20px;
+  width: 220px;
+  @include mediaQ (med) {
+    width: 450px;
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+  }
+  @include mediaQ (large) {
+    width: 600px;
+    position: absolute;
+    bottom: -60px;
+    right: 50px;
+  }
+}
+
 .projects {
   img {
     padding: 0;
@@ -7,10 +62,10 @@
     border-radius: 3px;
     width: 100%;
     @include mediaQ (med) {
-      width: 65%;
+      width: 63%;
     }
     @include mediaQ (large) {
-      width: 73%;
+      width: 70%;
     }
   }
 }
@@ -24,9 +79,17 @@
 }
 
 #lightbulb {
-  width: 60px;
-  @include mediaQ (med) {
-    width: 100px;
-  }
+  width: 100px;
+  position: absolute;
+  bottom: -15px;;
+  left: 425px;
   display: none;
+}
+
+#github-icon {
+  display: none;
+  width: 120px;
+  @include mediaQ (med) {
+    width: 150px;
+  }
 }

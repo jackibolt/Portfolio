@@ -1,8 +1,21 @@
 
 console.log('it works');
 
+document.addEventListener('wheel', (e) => {
+  console.log(e.deltaY);
+  if (e.deltaY > 30) {
+    console.log('up');
+  }
+  if (e.deltaY < -30) {
+    console.log('down');
+  }
+})
+
 const nav = document.querySelector('nav');
 const bigContainer = document.getElementById('big-container');
+const footer = document.querySelector('#github-icon');
+
+console.log(footer);
 
 
 if (screen.width < 768) {
@@ -16,7 +29,7 @@ nav.addEventListener('mouseover', (e) => {
 
     if (e.target.textContent === '1') {
       console.log(e.target);
-      e.target.textContent = 'TBD';
+      e.target.textContent = 'Home';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '1';
       })
@@ -44,6 +57,23 @@ nav.addEventListener('mouseover', (e) => {
 
 
 // HTML content variables for content box
+const homeHTML = `
+  <div class="container-fluid home">
+    <div class="meeting-img">
+      <img src="IMGS/greeting.svg" id='meeting' alt="people meeting">
+    </div>
+
+    <div class="connect-img">
+      <img src="IMGS/CCC.svg" id='connect' alt="connect create connect">
+      <img src="IMGS/CCC-stack.svg" id='connect-stack' alt="connect create connect">
+    </div>
+
+    <div class="world-img">
+      <img src="IMGS/world.svg" id='world' alt="">
+    </div>
+  </div>
+`;
+
 const aboutHTML = `
   <div class="container-fluid about">
     <h1 class='mb-3 mt-4 text-left title'>About Me</h1>
@@ -58,54 +88,56 @@ const aboutHTML = `
 
 const projectsHTML = `
   <div class="container-fluid projects">
-    <h3 class='mb-3 mt-4 text-left title'>Stuff I Built</h3>
+    <h3 class='mb-3 mt-1 text-left title'>Stuff I Built</h3>
     <div class='col container container-fluid text-center'>
       <div class="row justify-content-center">
         <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
-          <a href="http://www.jordanbolt.com" target='_blank'><img src="IMGS/jordan_pic.png" alt="jordanbolt.com"></a>
+          <img src="IMGS/jordan_pic.png" alt="jordanbolt.com">
+          <a href="http://www.jordanbolt.com" target='_blank'>
+            <div class="project-overlay a1">
+              <h5>Cinamatography Portfolio</h5>
+              <p class='desc'>Online portfolio for a sports cinematographer.</p>
+              <p><span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
+          <img src="IMGS/api_directory.png" alt="API Directory">
+          <div class="project-overlay b1">
+            <h5>Employee Directory</h5>
+            <p class='desc'>Searchable directory of employee information.</p>
+            <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
+          <img src="IMGS/photo_gallery.png" alt="Searchable Photo Gallery">
           <div class="project-overlay a1">
-            <h5>Cinamatography Portfolio</h5>
-            <p class='desc'>Online portfolio for a sports cinematographer.</p>
-          <p><span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+            <h5>Photo Gallery</h5>
+            <p class='desc'>Searchable photo gallery.</p>
+            <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
-        <img src="IMGS/api_directory.png" alt="API Directory">
-        <div class="project-overlay b1">
-          <h5>Employee Directory</h5>
-          <p class='desc'>Searchable directory of employee information.</p>
-          <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
-        <img src="IMGS/photo_gallery.png" alt="Searchable Photo Gallery">
-        <div class="project-overlay a1">
-          <h5>Photo Gallery</h5>
-          <p class='desc'>Searchable photo gallery.</p>
-          <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
-        </div>
-      </div>
-      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
-        <img src="IMGS/webapp.png" alt="WebApp">
-        <div class="project-overlay b1">
-          <h5>WebApp User Dashboard</h5>
-          <p class='desc'>Dashboard for a generic webapp.</p>
-          <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
+          <img src="IMGS/webapp.png" alt="WebApp">
+          <div class="project-overlay b1">
+            <h5>WebApp User Dashboard</h5>
+            <p class='desc'>Dashboard for a generic webapp.</p>
+            <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   `;
 
 const contactHTML = `
-  <div class="col container-fluid contact text-left">
+  <div class="container-fluid contact text-left">
     <h3 class='mb-3 mt-4 text-left title'>Connect with me</h3>
-    <div class="py-4 ml-4 text-left contact-text">
+    <div class="py-4 ml-2 ml-md-4 text-left contact-text">
       <p>I'm currently looking for opportunities to grow my portfolio <br>and try new things.</p>
-      <p class='mb-5'>Want to build something great with me?</p>
+      <p class='mb-3 mb-md-5'>Want to build something great with me?</p>
     </div>
     <a href="mailto:bolt.jacqueline@gmail.com?" target="_top" class='text-left'>bolt.jacqueline@gmail.com</a>
   </div>
@@ -115,26 +147,35 @@ const contactHTML = `
 // displays content for each menu section
 nav.addEventListener('click', (e) => {
   console.log(e.target);
-  if (e.target.id === '2' || e.target.textContent === '2' || e.target.textContent === 'About') {
+  if (e.target.id === '1' || e.target.textContent === '1' || e.target.textContent === 'Home') {
+    bigContainer.innerHTML = homeHTML;
+    footer.style.display = 'none';
+  }
+  else if (e.target.id === '2' || e.target.textContent === '2' || e.target.textContent === 'About') {
     bigContainer.innerHTML = aboutHTML;
+    footer.style.display = 'block';
 
     //shows light bulb svg
     const bright = document.querySelector('#bright');
     const lightbulb = document.querySelector('#lightbulb');
 
     bright.addEventListener('mouseover', () => {
-      lightbulb.style.display = 'inline';
-      bright.addEventListener ('mouseout', () => {
-        lightbulb.style.display = 'none';
-      });
+      if (screen.width > 768) {
+        lightbulb.style.display = 'inline';
+        bright.addEventListener ('mouseout', () => {
+          lightbulb.style.display = 'none';
+        });
+      }
     });
 
   }
   else if (e.target.id === '3' || e.target.textContent === '3' || e.target.textContent === 'Projects') {
     bigContainer.innerHTML = projectsHTML;
+    footer.display.style = 'block';
   }
   else if (e.target.id === '4' || e.target.textContent === '4' || e.target.textContent === 'Contact') {
     bigContainer.innerHTML = contactHTML;
+    footer.display.style = 'block';
   }
 
 })
