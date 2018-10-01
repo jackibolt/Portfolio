@@ -1,16 +1,6 @@
 
 console.log('it works');
 
-document.addEventListener('wheel', (e) => {
-  console.log(e.deltaY);
-  if (e.deltaY > 30) {
-    console.log('up');
-  }
-  if (e.deltaY < -30) {
-    console.log('down');
-  }
-})
-
 const nav = document.querySelector('nav');
 const bigContainer = document.getElementById('big-container');
 const footer = document.querySelector('#github-icon');
@@ -89,7 +79,7 @@ const aboutHTML = `
 const projectsHTML = `
   <div class="container-fluid projects">
     <h3 class='mb-3 mt-1 text-left title'>Stuff I Built</h3>
-    <div class='col container container-fluid text-center'>
+    <div class='col container-fluid text-center project-pics'>
       <div class="row justify-content-center">
         <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
           <img src="IMGS/jordan_pic.png" alt="jordanbolt.com">
@@ -103,29 +93,35 @@ const projectsHTML = `
         </div>
         <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
           <img src="IMGS/api_directory.png" alt="API Directory">
-          <div class="project-overlay b1">
-            <h5>Employee Directory</h5>
-            <p class='desc'>Searchable directory of employee information.</p>
-            <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
-          </div>
+          <a href="https://jackibolt.github.io/Project-8-API-Directory/" target="_blank">
+            <div class="project-overlay b1">
+              <h5>Employee Directory</h5>
+              <p class='desc'>Searchable directory of employee information.</p>
+              <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+            </div>
+          </a>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
           <img src="IMGS/photo_gallery.png" alt="Searchable Photo Gallery">
-          <div class="project-overlay a1">
-            <h5>Photo Gallery</h5>
-            <p class='desc'>Searchable photo gallery.</p>
-            <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
-          </div>
+          <a href='https://jackibolt.github.io/Project-5-Photo-Gallery/' target="_blank">
+            <div class="project-overlay a1">
+              <h5>Photo Gallery</h5>
+              <p class='desc'>Searchable photo gallery.</p>
+              <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+            </div>
+          </a>
         </div>
         <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
           <img src="IMGS/webapp.png" alt="WebApp">
-          <div class="project-overlay b1">
-            <h5>WebApp User Dashboard</h5>
-            <p class='desc'>Dashboard for a generic webapp.</p>
-            <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
-          </div>
+          <a href='https://jackibolt.github.io/Project-7-WebApp-Dashboard/' target="_blank">
+            <div class="project-overlay b1">
+              <h5>WebApp User Dashboard</h5>
+              <p class='desc'>Dashboard for a generic webapp.</p>
+              <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -146,7 +142,6 @@ const contactHTML = `
 
 // displays content for each menu section
 nav.addEventListener('click', (e) => {
-  console.log(e.target);
   if (e.target.id === '1' || e.target.textContent === '1' || e.target.textContent === 'Home') {
     bigContainer.innerHTML = homeHTML;
     footer.style.display = 'none';
@@ -171,11 +166,11 @@ nav.addEventListener('click', (e) => {
   }
   else if (e.target.id === '3' || e.target.textContent === '3' || e.target.textContent === 'Projects') {
     bigContainer.innerHTML = projectsHTML;
-    footer.display.style = 'block';
+    footer.style.display = 'block';
   }
   else if (e.target.id === '4' || e.target.textContent === '4' || e.target.textContent === 'Contact') {
     bigContainer.innerHTML = contactHTML;
-    footer.display.style = 'block';
+    footer.style.display = 'block';
   }
 
 })

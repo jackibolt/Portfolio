@@ -9,7 +9,11 @@ body {
   margin: auto;
   background-color: #292d34;
   color: white;
-  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 p {

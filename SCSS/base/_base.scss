@@ -11,7 +11,10 @@ body {
   margin: auto;
   background-color: $background;
   color: white;
-  min-height: 100vh;
+  // min-height: 100vh;
+  @include mediaQ (med) {
+    overflow: hidden;
+  }
 }
 
 p {
