@@ -44,7 +44,7 @@
   @include mediaQ (med) {
     width: 450px;
     position: absolute;
-    bottom: -120px;
+    bottom: 220px;
     right: 0px;
   }
   @include mediaQ (large) {
@@ -61,12 +61,6 @@
     border: grey 3px solid;
     border-radius: 3px;
     width: 100%;
-    @include mediaQ (med) {
-      width: 63%;
-    }
-    @include mediaQ (large) {
-      width: 70%;
-    }
   }
 }
 
@@ -86,10 +80,11 @@
   display: none;
 }
 
-#github-icon {
-  display: none;
-  width: 120px;
+#github-icon,
+#linkedin-icon {
+  display: inline;
+  width: 30px;
   @include mediaQ (med) {
-    width: 150px;
+    width: 40px;
   }
 }

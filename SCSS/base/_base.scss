@@ -12,7 +12,7 @@ body {
   background-color: $background;
   color: white;
   // min-height: 100vh;
-  @include mediaQ (med) {
+  @include mediaQ (large) {
     overflow: hidden;
   }
 }

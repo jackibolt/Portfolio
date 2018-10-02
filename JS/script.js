@@ -3,11 +3,9 @@ console.log('it works');
 
 const nav = document.querySelector('nav');
 const bigContainer = document.getElementById('big-container');
-const footer = document.querySelector('#github-icon');
+const footer = document.querySelector('footer');
+const navLink = document.querySelectorAll('.nav-link');
 
-if (screen.width < 768) {
-
-}
 
 
 // Show nav item titles for large and xl screens
@@ -15,7 +13,6 @@ nav.addEventListener('mouseover', (e) => {
   if (screen.width > 767) {
 
     if (e.target.textContent === '1') {
-      console.log(e.target);
       e.target.textContent = 'Home';
       e.target.addEventListener('mouseout', () => {
         e.target.textContent = '1';
@@ -74,55 +71,75 @@ const aboutHTML = `
   `;
 
 const projectsHTML = `
-  <div class="container-fluid projects">
-    <h3 class='mb-3 mt-1 text-left title'>Stuff I Built</h3>
-    <div class='col container-fluid text-center project-pics'>
-      <div class="row justify-content-center">
-        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
-          <img src="IMGS/jordan_pic.png" alt="jordanbolt.com">
-          <a href="http://www.jordanbolt.com" target='_blank'>
-            <div class="project-overlay a1">
-              <h5>Cinamatography Portfolio</h5>
-              <p class='desc'>Online portfolio for a sports cinematographer.</p>
-              <p><span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
-          <img src="IMGS/api_directory.png" alt="API Directory">
-          <a href="https://jackibolt.github.io/Project-8-API-Directory/" target="_blank">
-            <div class="project-overlay b1">
-              <h5>Employee Directory</h5>
-              <p class='desc'>Searchable directory of employee information.</p>
-              <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
-            </div>
-          </a>
-        </div>
+<div class="container-fluid projects">
+  <h3 class='mb-3 mt-1 text-left title'>Stuff I Built</h3>
+  <div class='col container-fluid text-center project-pics'>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
+        <img src="IMGS/jordan_pic.png" alt="jordanbolt.com">
+        <a href="http://www.jordanbolt.com" target='_blank'>
+          <div class="project-overlay a1">
+            <h5>Cinamatography Portfolio</h5>
+            <p class='desc'>Online portfolio for a sports cinematographer.</p>
+            <p><span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+          </div>
+        </a>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
-          <img src="IMGS/photo_gallery.png" alt="Searchable Photo Gallery">
-          <a href='https://jackibolt.github.io/Project-5-Photo-Gallery/' target="_blank">
-            <div class="project-overlay a1">
-              <h5>Photo Gallery</h5>
-              <p class='desc'>Searchable photo gallery.</p>
-              <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
-          <img src="IMGS/webapp.png" alt="WebApp">
-          <a href='https://jackibolt.github.io/Project-7-WebApp-Dashboard/' target="_blank">
-            <div class="project-overlay b1">
-              <h5>WebApp User Dashboard</h5>
-              <p class='desc'>Dashboard for a generic webapp.</p>
-              <p><span class='skill'>HTML</span> <span class='skill'>CSS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
-            </div>
-          </a>
-        </div>
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
+        <img src="IMGS/api_directory.png" alt="API Directory">
+        <a href="https://jackibolt.github.io/Project-8-API-Directory/" target="_blank">
+          <div class="project-overlay b1">
+            <h5>Employee Directory</h5>
+            <p class='desc'>Searchable directory of employee information.</p>
+            <p><span class='skill'>Javascript</span>   <span class='skill'>API</span>   <span class='skill'>HTML</span>   <span class='skill'>CSS/SASS</span></p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 c">
+        <img src="IMGS/rhino.png" alt="Newsletter Sign Up Form">
+        <a href="https://jackibolt.github.io/Project-3-Registration-Form/" target="_blank">
+          <div class="project-overlay c1">
+            <h5>Sign Up Form</h5>
+            <p class='desc'>Sign up form for a newsletter.</p>
+            <p> <span class='skill'>HTML</span>   <span class='skill'>CSS</span></p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 a">
+        <img src="IMGS/photo_gallery.png" alt="Searchable Photo Gallery">
+        <a href='https://jackibolt.github.io/Project-5-Photo-Gallery/' target="_blank">
+          <div class="project-overlay a1">
+            <h5>Photo Gallery</h5>
+            <p class='desc'>Searchable photo gallery.</p>
+            <p><span class='skill'>HTML</span> <span class='skill'>CSS/SASS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 b">
+        <img src="IMGS/webapp.png" alt="WebApp">
+        <a href='https://jackibolt.github.io/Project-7-WebApp-Dashboard/' target="_blank">
+          <div class="project-overlay b1">
+            <h5>WebApp User Dashboard</h5>
+            <p class='desc'>Dashboard for a generic webapp.</p>
+            <p><span class='skill'>HTML</span> <span class='skill'>CSS/SASS</span> <span class='skill'>Javascript</span> <span class='skill'>JQuery</span></p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg m-1 m-md-2 m-lg-3 p-0 c">
+        <img src="IMGS/style-guide.png" alt="Style Guide">
+        <a href="https://jackibolt.github.io/Project-4-Style-Guide/" target="_blank">
+          <div class="project-overlay c1">
+            <h5>CSS Style Guide</h5>
+            <p class='desc'>CSS style guide built to match a mockup.</p>
+            <p><span class='skill'>HTML</span>   <span class='skill'>CSS/SASS</span></p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
+</div>
   `;
 
 const contactHTML = `

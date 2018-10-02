@@ -11,6 +11,10 @@
 }
 
 .big-container {
-  min-height: calc(100vh - 220px);
-  // overflow: hidden;
+  min-height: calc(100vh - 180px);
+}
+
+footer {
+  display: none;
+  
 }

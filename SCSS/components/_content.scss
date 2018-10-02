@@ -56,17 +56,16 @@ p {
 // Projects section
 
 .projects {
+  padding-left: 5%;
+  padding-right: 0px;
   .title {
-    padding-left: $left-padding;
+    padding-left: 5%;
   }
-  @include mediaQ (large) {
-    .a {
-      text-align: right;
-    }
-    .b {
-      text-align: left;
-    }
-  }
+}
+
+.project-pics {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .a1 {
@@ -77,6 +76,13 @@ p {
 }
 
 .b1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.c1 {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -94,10 +100,10 @@ p {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 10px;
     h5,
     p {
       font-size: $tiny-overlay;
-      margin-top: 10px;
     }
     @include mediaQ (med) {
       font-size: $small-overlay;
@@ -107,7 +113,7 @@ p {
     }
   }
   p {
-    // margin-top: 10px;
+    margin-top: 5px;
     @include mediaQ (med) {
       font-size: $small-overlay;
     }
@@ -115,7 +121,7 @@ p {
       font-size: $base-font-size
     }
   }
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,12 +129,6 @@ p {
   align-items: center;
   background: rgba(41, 45, 52, .9);
   width: 100%;
-  @include mediaQ (med) {
-    width: 65%;
-  }
-  @include mediaQ (large) {
-    width: 73%;
-  }
   &:hover {
     opacity: 1;
     transition: .5s;
@@ -139,10 +139,6 @@ p {
 .skill {
   margin-left: 4px;
   margin-right: 4px;
-  // &:hover {
-  //   font-weight: 900;
-  //   color: $font-teal;
-  // }
 }
 
 .desc {

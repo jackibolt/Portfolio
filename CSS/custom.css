@@ -10,7 +10,7 @@ body {
   background-color: #292d34;
   color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body {
     overflow: hidden;
   }
@@ -32,21 +32,6 @@ h4 {
   h4 {
     font-size: 1.5rem;
   }
-}
-
-.full-container {
-  padding: 0;
-  flex: 1;
-}
-
-.full-wrapper {
-  min-height: 100vh;
-  max-width: 1400px;
-  text-align: center;
-}
-
-.big-container {
-  min-height: calc(100vh - 220px);
 }
 
 header {
@@ -123,7 +108,7 @@ header h6 {
   #world {
     width: 450px;
     position: absolute;
-    bottom: -120px;
+    bottom: 220px;
     right: 0px;
   }
 }
@@ -141,16 +126,6 @@ header h6 {
   border: grey 3px solid;
   border-radius: 3px;
   width: 100%;
-}
-@media (min-width: 768px) {
-  .projects img {
-    width: 63%;
-  }
-}
-@media (min-width: 992px) {
-  .projects img {
-    width: 70%;
-  }
 }
 
 #biplane {
@@ -171,13 +146,15 @@ header h6 {
   display: none;
 }
 
-#github-icon {
-  display: none;
-  width: 120px;
+#github-icon,
+#linkedin-icon {
+  display: inline;
+  width: 30px;
 }
 @media (min-width: 768px) {
-  #github-icon {
-    width: 150px;
+  #github-icon,
+#linkedin-icon {
+    width: 40px;
   }
 }
 
@@ -267,16 +244,17 @@ p {
   cursor: pointer;
 }
 
-.projects .title {
-  padding-left: 10%;
+.projects {
+  padding-left: 5%;
+  padding-right: 0px;
 }
-@media (min-width: 992px) {
-  .projects .a {
-    text-align: right;
-  }
-  .projects .b {
-    text-align: left;
-  }
+.projects .title {
+  padding-left: 5%;
+}
+
+.project-pics {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .a1 {
@@ -293,13 +271,20 @@ p {
   left: 0px;
 }
 
+.c1 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .project-overlay {
   opacity: 0;
   border: grey 3px solid;
   border-radius: 3px;
   color: #66b8ff;
   line-height: normal;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,11 +298,11 @@ p {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-top: 10px;
 }
 .project-overlay h5 h5,
 .project-overlay h5 p {
   font-size: 0.7rem;
-  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .project-overlay h5 {
@@ -329,6 +314,9 @@ p {
     font-size: 1.25rem;
   }
 }
+.project-overlay p {
+  margin-top: 5px;
+}
 @media (min-width: 768px) {
   .project-overlay p {
     font-size: 0.85rem;
@@ -337,16 +325,6 @@ p {
 @media (min-width: 992px) {
   .project-overlay p {
     font-size: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .project-overlay {
-    width: 65%;
-  }
-}
-@media (min-width: 992px) {
-  .project-overlay {
-    width: 73%;
   }
 }
 .project-overlay:hover {
@@ -383,6 +361,25 @@ p {
 }
 .contact a:hover {
   color: #8bf2af;
+}
+
+.full-container {
+  padding: 0;
+  flex: 1;
+}
+
+.full-wrapper {
+  min-height: 100vh;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.big-container {
+  min-height: calc(100vh - 180px);
+}
+
+footer {
+  display: none;
 }
 
 /*# sourceMappingURL=custom.css.map */
